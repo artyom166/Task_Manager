@@ -1,0 +1,218 @@
+/* Global reset and basic styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Task manager window */
+.window {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  width: 400px;
+  max-width: 100%;
+}
+
+/* Top search bar */
+#first_part {
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+#first_part input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* Main task section */
+#second_part {
+  padding: 20px;
+}
+
+.tasktext p {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+#tasklist {
+  display: none;
+  margin-bottom: 20px;
+}
+
+.paragraf {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+#name, #description {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: calc(100% - 20px);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+#description {
+  height: 60px;
+  resize: none;
+}
+
+/* Create task button */
+#taskCreateBtn {
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+#taskCreateBtn:hover {
+  background-color: #0056b3;
+}
+
+/* Open task button */
+#open-task-btn {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+#open-task-btn:hover {
+  background-color: #218838;
+}
+
+/* Task items */
+.taskdiv {
+  background-color: #fff;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.taskdiv:hover {
+  background-color: #f0f0f0;
+}
+
+.taskinfo {
+  flex: 1;
+  margin-left: 12px;
+}
+
+.taskinfo p {
+  margin: 4px 0;
+  color: #555;
+  font-size: 14px;
+}
+
+.taskinfo p strong {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Checkboxes */
+.checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  appearance: none;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.checkbox:checked {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.checkbox:checked::after {
+  content: "\2713";
+  font-size: 16px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Action buttons */
+.delete-btn, .restore-btn, .permanently-delete-btn {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-left: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover, .restore-btn:hover, .permanently-delete-btn:hover {
+  background-color: #c82333;
+}
+
+.restore-btn {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.restore-btn:hover {
+  background-color: #e0a800;
+}
+
+.permanently-delete-btn {
+  background-color: #dc3545;
+}
+
+.permanently-delete-btn:hover {
+  background-color: #c82333;
+}
+
+.hidden {
+  display: none;
+}
